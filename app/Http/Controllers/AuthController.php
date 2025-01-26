@@ -75,19 +75,19 @@ class AuthController extends Controller
     }
 
     public function editProfile(Request $request)
-{
-    $request->validate([
-        'name' => 'nullable|string|max:255',
-        'email' => 'nullable|email|unique:users,email,' . auth()->id(),
-        'phone_number' => 'nullable|string|max:15',
-        'alamat' => 'nullable|string',
-    ]);
+    {
+        $request->validate([
+            'name' => 'nullable|string|max:255',
+            'email' => 'nullable|email|unique:users,email,' . auth()->id(),
+            'phone_number' => 'nullable|string|max:15',
+            'alamat' => 'nullable|string',
+        ]);
 
-    $user = auth()->user();
-    $user->update($request->only(['name', 'email', 'phone_number', 'alamat']));
+        $user = auth()->user();
+        $user->update($request->only(['name', 'email', 'phone_number', 'alamat']));
 
-    return response()->json(['message' => 'Profile updated successfully.', 'user' => $user], 200);
-}
+        return response()->json(['message' => 'Profile updated successfully.', 'user' => $user], 200);
+    }
 
 
 
