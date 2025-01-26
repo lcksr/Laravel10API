@@ -1,2 +1,2 @@
-# Flutter
-Aplikasi mobile menggunakan flutter dan laravel 10 sebagai backend API
+# BACKEND API
+Backend API aplikasi eresto menggunakan framework laravel 10
