@@ -115,4 +115,10 @@ class AuthController extends Controller
         // Mengembalikan data user yang sedang terautentikasi
         return response()->json(auth()->user());
     }
+
+
+    public function contoh()
+    {
+            
+    }
 }
